@@ -20,7 +20,7 @@ body,html{
     --textCyan: hsl(183, 100%, 15%);
     --backgroundCyan: hsl(183, 100%, 95%);
     --darkGrayCyan: rgba(235 243 244 /.5);
-    --tipBGCyan: hsl(183, 91%, 21%);
+    --tipBGCyan: hsl(183, 90%, 16%);
     --highLightCyan:  hsl(172, 67%, 45%);
     --abovePersonColor: rgb(218, 241, 234); 
     --underPersonColor: rgb(196, 197, 197);
