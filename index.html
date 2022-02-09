@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&family=Space+Mono&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+ <article id="title">
+   <p>SPLITTER</p>
+ </article>
+<main id="mainBody">
+
+  <section id="innerBody">
+  <section  id="billTotal">
+    <p class="sectionTitle">Bill</p>
+    <div id="flexIconTotal"> <img id="dollarIcon" src="./images/icon-dollar.svg" alt="icon-dollar"> 
+     <input id="total" type="text" placeholder="0"> </div>
+  </section>
+  
+  <section id="tipPercentContainer">
+    <div>
+   <p class="sectionTitle">Select Tip %</p> 
+  <div id="tipSelection">
+ <input type="button" value="5%" class="tipPercent">
+ <input type="button" value="10%" class="tipPercent">
+ <input type="button" value="15%" class="tipPercent">
+ <input type="button" value="25%" class="tipPercent">
+ <input type="button" value="50%" class="tipPercent">
+<input type="text" id="tipPercentCustom" class="tipPercent" placeholder="Custom">
+  </div>
+
+  </div></section>
+
+  <section id="totalPeople"> <p class="sectionTitle">Number of People</p> 
+    <div id="totalPeopleContainer"> <img src="images/icon-person.svg" alt="peopleIcon" id="peopleIcon">
+       <input type="text" name="peopleTotal" id="totalPeopleInput" placeholder="0">
+    </div>
+  </section>
+  
+  <section id="calcValues">
+    <div class="tipAmountContainer"> <div><p class="calcOverPersonFlex"> Tip Amount
+      <span class="overPersonCol">/ person</span> </p></div>   <p class="tipCalcStyle" id="tipPer">$0.00</p></div>
+   
+      <div class="tipAmountContainer"> <div><p class="calcOverPersonFlex">Total
+        <span class="overPersonCol">/ person</span> </p></div>   <p class="tipCalcStyle" id="totalPer">$0.00</p></div>
+
+  
+  <div id="resetBttContainer"><input id="resetBtt" type="button" value="Reset"></div>
+    </section>
+  </section>
+
+
+
+
+
+</mai>
+
+</body>
+
+<script src="./script.js"></script>
+</html>

@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'Space Mono', monospace;
+    color: var(--textCyan);
+    background-color: var(--backgroundCyan);
+}
+:root{
+    --textCyan: hsl(183, 100%, 15%);
+    --backgroundCyan: hsl(183, 100%, 95%);
+    --darkGrayCyan: rgba(235 243 244 /.5);
+    --tipBGCyan: hsl(183, 91%, 21%);
+    --highLightCyan:  hsl(172, 67%, 45%);
+    --abovePersonColor: rgb(218, 241, 234); 
+    --underPersonColor: rgb(196, 197, 197);
+
+}
+
+#title{
+margin: 20px 20px;
+font-size: 1.5em;
+letter-spacing: 20px;
+width: 146px;
+padding: 20px;
+overflow-wrap: break-word;
+line-height: 1.6em;
+text-align: center;
+font-weight: 900;
+
+}
+#mainBody{
+
+height: 90%;
+width: 100%;
+background-color: white;
+    border-radius:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+#innerBody{
+    margin-top: 40px;
+height: 95%;
+width: 90%;
+
+}
+#billTotal{
+margin-bottom: 15px;
+}
+.sectionTitle{
+margin-bottom: 10px;
+
+}
+
+#flexIconTotal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--darkGrayCyan);
+    border-radius: 3px;
+}
+#dollarIcon{
+    height: 1.2em;
+}
+#total{
+    border: none;
+  background-color: var(--darkGrayCyan);
+    color: var(--textCyan);
+    text-align: right;
+    font-size: 1.2em;
+    font-weight:800;
+    width: 50%;
+}
+#total:focus{
+    outline: none;
+    background: transparent;
+}
+#totalPeopleInput{
+    outline: none;
+    background: transparent;
+}
+
+
+#tipPercentContainer{
+    margin-bottom: 15px;
+  
+}
+#tipSelection{
+    text-align: center;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+
+
+
+}
+.tipPercent{
+
+    padding: 5px;
+    font-size: 1.3em;
+    border-radius: 3px;
+    cursor: pointer;
+    min-width: 0;
+    color:white;
+    background-color: var(--tipBGCyan);
+    border: none;
+    font-weight: 600;
+
+}
+
+
+
+#active{
+    background-color: var(--highLightCyan);
+    color: var(--textCyan);
+}
+
+
+
+#tipPercentCustom{
+    cursor:text;
+    color: var(--textCyan) ;
+    text-align: right;
+    background-color: var(--darkGrayCyan);
+    padding: 10px;
+    border: none;
+}
+
+
+#tipPercentCustom:focus{
+    outline: none;
+    background: transparent;
+}
+#totalPeople{
+    margin-bottom: 25px;
+}
+#totalPeopleContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--darkGrayCyan);
+    margin: 10px 10px;
+}
+#peopleIcon{
+    height: 1.2em;
+ 
+}
+#totalPeopleInput{
+    border: none;
+    background-color: var(--darkGrayCyan);
+      color: var(--darkCyan);
+      text-align: right;
+      font-size: 1.2em;
+      font-weight:800;
+      width: 50%;
+}
+
+#calcValues{
+   display: flex;
+   flex-direction: column;
+   border-radius: 20px;
+height: 250px;
+width: 100%;
+justify-content: center;
+align-items: center;
+background-color:var(--tipBGCyan);
+}
+.tipAmountContainer{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 90%;
+    align-items: center;
+   margin: 10px;
+   color: var(--overPersonColor)
+   
+}
+.calcOverPersonFlex{
+display: flex;
+flex-direction: column;
+color: var(--abovePersonColor);
+}
+.overPersonCol{
+    color: var(--underPersonColor);
+    font-size: .8em;
+}
+
+.tipCalcStyle{
+    font-size: 2rem;
+    color: var(--highLightCyan);
+    
+}
+#resetBttContainer{
+    width: 90%;
+}
+#resetBtt{
+    margin-top: 20px;
+ font-size: 1.5rem;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--highLightCyan);
+    color: var(--textCyan);
+    cursor: pointer;
+}
