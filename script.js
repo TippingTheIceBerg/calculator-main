@@ -75,7 +75,7 @@ custom.style.border = 'none'
         
        tipDec = parseInt(tipsChoice[i].value) / 100;
 
-    //    ---------------------
+    //  ---------------------
     })
    
     // --------------------
@@ -88,14 +88,15 @@ custom.style.border = 'none'
 
 borderBill.addEventListener("click",()=>{
     borderBill.style.border = "solid var(--highLightCyan)"
-
+    
+    borderPeople.style.border = "none"
     
 
 
 })
 borderPeople.addEventListener("click",()=>{
     borderPeople.style.border = "solid var(--highLightCyan)"
-
+  borderBill.style.border = "none"
  
 
 })
@@ -129,22 +130,35 @@ else if(isNaN(numPeople)){
         return;
     }
 
-        // this section removes all active colors if all values are accetped, if any values fails, error colors will appear for bill,custom, and/or num of people
-for(let i = 0 ; i < tipsChoice.length-1 ;i++){
-    tipsChoice[i].setAttribute('id',"") ;
-}
-custom.style.border = 'none'
+        // this section removes all active colors if all values are accetped, if any values fails, error colors will appear for bill and num of people. I've decided that knowing what percent tip was choosen is more important to keep for each reset press than bill and num of people. As a result, these values will be kept highlighted
+        
+            // commented out section is for if the desision is made to remove the highlighted tip selection after each reset.
+// for(let i = 0 ; i < tipsChoice.length-1 ;i++){
+//     tipsChoice[i].setAttribute('id',"") ;
+// }
+// custom.style.border = 'none'
+            // ----------------
+
+
 borderBill.style.border = "none"
 borderPeople.style.border ='none'
         // ----------------
 
+        
+
     // -------------------------
 
     calcTip = bill * tipDec / numPeople
+
+    
+    calcTip = calcTip.toFixed(2);
+
+
     tipPerPersonText.innerText = `$${calcTip}`
 
-    calcTotal = bill / numPeople;
 
+    calcTotal = bill / numPeople;
+calcTotal = calcTotal.toFixed(2);
     totalPerPersonText.innerText = `$${calcTotal}`
 
 
