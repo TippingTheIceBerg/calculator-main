@@ -21,18 +21,18 @@ body,html{
     --backgroundCyan: hsl(183, 100%, 95%);
     --darkGrayCyan: rgba(235 243 244 /.5);
     --tipBGCyan: hsl(183, 90%, 16%);
-    --highLightCyan:  hsl(172, 67%, 45%);
+    --highLightCyan:  hsl(172, 77%, 48%);
     --abovePersonColor: rgb(218, 241, 234); 
     --underPersonColor: rgb(196, 197, 197);
+    --hoverEffect: rgb(139, 230, 216);
 
 }
 
 #title{
-margin: 20px 20px;
+
 font-size: 1.5em;
 letter-spacing: 20px;
 width: 146px;
-padding: 20px;
 overflow-wrap: break-word;
 line-height: 1.6em;
 text-align: center;
@@ -42,7 +42,7 @@ font-weight: 900;
 #mainBody{
 
 height: 90%;
-width: 100%;
+min-width: 90%;
 background-color: white;
     border-radius:20px;
     display: flex;
@@ -52,19 +52,30 @@ background-color: white;
 
 }
 #innerBody{
-    margin-top: 40px;
-height: 95%;
-width: 90%;
+
+height: 100%;
+max-width: 90%;
 
 
 }
-#billTotal{
-margin-bottom: 15px;
 
-}
 .sectionTitle{
-margin-bottom: 10px;
+max-width: 100%;
+}
+.errorMessageHolder{
 
+display: flex;
+justify-content: space-between;
+
+position: relative;
+left: 6px;
+
+
+}
+#errorMessage {
+    display: none;
+    color: orange;
+    
 }
 
 
@@ -76,8 +87,9 @@ margin-bottom: 10px;
     padding: 15px;
     background-color: var(--darkGrayCyan);
     border-radius: 3px;
+    margin-bottom: 30px;
 }
-/*  */
+
 #dollarIcon{
     height: 1.2em;
 }
@@ -88,7 +100,7 @@ margin-bottom: 10px;
     text-align: right;
     font-size: 1.2em;
     font-weight:800;
-    width: 50%;
+    max-width: 50%;
 }
 #total:focus{
     outline: none;
@@ -100,29 +112,27 @@ margin-bottom: 10px;
 }
 
 
-#tipPercentContainer{
-    margin-bottom: 15px;
 
-}
 #tipSelection{
     text-align: center;
     display:grid;
     grid-template-columns: repeat(2,1fr);
-    grid-gap: 10px;
+    grid-gap: 18px;
 
 }
 .tipPercent{
 
     padding: 5px;
     font-size: 1.3em;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
     min-width: 0;
     color:white;
     background-color: var(--tipBGCyan);
     border: none;
     font-weight: 600;
-
+    padding: 15px;
+    
 }
 
 
@@ -149,7 +159,7 @@ margin-bottom: 10px;
     background: transparent;
 }
 #totalPeople{
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 
 }
 #totalPeopleContainer{
@@ -160,6 +170,7 @@ margin-bottom: 10px;
     padding: 15px;
     background-color: var(--darkGrayCyan);
     margin: 10px 10px;
+
 }
 #peopleIcon{
     height: 1.2em;
@@ -172,16 +183,16 @@ margin-bottom: 10px;
       text-align: right;
       font-size: 1.2em;
       font-weight:800;
-      width: 50%;
+      max-width: 50%;
 }
 
 #calcValues{
    display: flex;
    flex-direction: column;
    border-radius: 20px;
-height: 250px;
-width: 100%;
-justify-content: center;
+height: 350px;
+max-width: 100%;
+justify-content: space-evenly;
 align-items: center;
 background-color:var(--tipBGCyan);
 
@@ -191,7 +202,7 @@ background-color:var(--tipBGCyan);
     display:flex;
     justify-content: space-between;
     flex-direction: row;
-    width: 90%;
+    min-width: 90%;
     align-items: center;
    margin: 10px;
    color: var(--overPersonColor)
@@ -213,12 +224,12 @@ color: var(--abovePersonColor);
     
 }
 #resetBttContainer{
-    width: 90%;
+    min-width: 90%;
 }
 #resetBtt{
     margin-top: 20px;
  font-size: 1.2rem;
-    width: 100%;
+    min-width: 100%;
     height: 50px;
     border-radius: 10px;
     border: none;
@@ -229,16 +240,16 @@ color: var(--abovePersonColor);
 }
 
 
-@media (min-width:200px){
+@media (min-width:1440px){
 #title{
-    padding: 2px;
+    padding: 20px;
     margin-top: 50px
 
 }
     #mainBody{
         margin-bottom: 300px;
-        height: 40%;
-        width: 80%;
+        height: 80%;
+        max-width: 80%;
        
         }
         #innerBody{
@@ -266,41 +277,44 @@ color: var(--abovePersonColor);
       
         #billTotal{
             grid-area: bill;
-            width: 90%
+            max-width: 90%
      
         }
         #tipPercentConainter{
-
             grid-area: tip;  
         }
         .tipPercent{
-       width:90%;
+       max-width:90%;
        height: 45px;
-
- 
+       padding: 0.01em;
+       transition: background-color linear .5s;
         }
+        .tipPercent:hover{
+            background-color:var(--hoverEffect)
+        }
+
         #tipPercentCustom{
 
             text-align: center;
-            font-size: 18px;
+            font-size: 1.3em;
             padding: .01em;
         
   
         }
         #tipSelection{
             grid-template-columns: repeat(3,1fr);
-            width:92%;
+            max-width:92%;
             grid-gap: 10px;
         }
-
+    
 #totalPeople{
     grid-area: people;
-    width: 90%;
+    max-width: 90%;
 
 }
 #calcValues{
     grid-area: calc;
-    width: 100%;
+    max-width: 100%;
   height: 90%;
   position: relative;
  
@@ -320,7 +334,13 @@ color: var(--abovePersonColor);
 #resetBttContainer{
     position: absolute;
     bottom: 8%;
+  
  
 }
-
+#resetBtt{
+    transition: background-color linear .5s;
+}
+#resetBtt:hover{
+        background-color:var(--hoverEffect)
+}
 }
