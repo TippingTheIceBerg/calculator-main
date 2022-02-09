@@ -6,8 +6,9 @@ let tipDec = .15;
 let total = 0;
 
 
-let reset = document.getElementById("resetBtt")
 
+let reset = document.getElementById("resetBtt")
+let errorText = document.getElementById("errorMessage")
 
 let borderBill = document.getElementById("flexIconTotal");
 
@@ -115,18 +116,22 @@ reset.addEventListener("click",() =>{
 
 
 if(isNaN(bill) && isNaN(numPeople) ){
-    borderBill.style.border = "solid red";
-    borderPeople.style.border = "solid red";
+    borderBill.style.border = "solid orange";
+    borderPeople.style.border = "solid orange";
+    errorText.style.display = "inline-flex"
+
     return;
 }
 if (isNaN(bill)){
     borderPeople.style.border = "none"
-    borderBill.style.border = "solid red";
+    borderBill.style.border = "solid orange";
+    errorText.style.display = "inline-flex"
     return;
 }
 else if(isNaN(numPeople)){
     borderBill.style.border = "none"
-        borderPeople.style.border = "solid red"
+        borderPeople.style.border = "solid orange"
+        errorText.style.display = "inline-flex"
         return;
     }
 
@@ -139,7 +144,7 @@ else if(isNaN(numPeople)){
 // custom.style.border = 'none'
             // ----------------
 
-
+errorText.style.display = "none"
 borderBill.style.border = "none"
 borderPeople.style.border ='none'
         // ----------------
