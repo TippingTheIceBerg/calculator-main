@@ -3,7 +3,7 @@
     padding: 0;
 }
 body,html{
-    height: 100%;
+
     width: 100%;
     display: flex;
     justify-content: center;
@@ -37,22 +37,23 @@ overflow-wrap: break-word;
 line-height: 1.6em;
 text-align: center;
 font-weight: 900;
+padding:30px 30px;
 
 }
 #mainBody{
 
-height: 90%;
-min-width: 90%;
-background-color: white;
+    min-width: 90%;
+    background-color: white;
     border-radius:20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    padding: 20px;
+
 
 }
 #innerBody{
-
+position: relative;
 height: 100%;
 max-width: 90%;
 
@@ -60,7 +61,10 @@ max-width: 90%;
 }
 
 .sectionTitle{
+margin-bottom: 10px;
 max-width: 100%;
+
+
 }
 .errorMessageHolder{
 
@@ -112,7 +116,10 @@ left: 6px;
 }
 
 
+#tipPercentContainer{
+    margin-bottom: 30px;
 
+}
 #tipSelection{
     text-align: center;
     display:grid;
@@ -187,10 +194,10 @@ left: 6px;
 }
 
 #calcValues{
+    position: relative;
    display: flex;
    flex-direction: column;
    border-radius: 20px;
-height: 350px;
 max-width: 100%;
 justify-content: space-evenly;
 align-items: center;
@@ -199,6 +206,7 @@ background-color:var(--tipBGCyan);
 
 }
 .tipAmountContainer{
+
     display:flex;
     justify-content: space-between;
     flex-direction: row;
@@ -212,6 +220,7 @@ background-color:var(--tipBGCyan);
 display: flex;
 flex-direction: column;
 color: var(--abovePersonColor);
+
 }
 .overPersonCol{
     color: var(--underPersonColor);
@@ -243,13 +252,12 @@ color: var(--abovePersonColor);
 @media (min-width:1440px){
 #title{
     padding: 20px;
-    margin-top: 50px
+    margin-top: 10px
 
 }
     #mainBody{
-        margin-bottom: 300px;
-        height: 80%;
-        max-width: 80%;
+  
+        max-width: 90%;
        
         }
         #innerBody{
@@ -315,10 +323,8 @@ color: var(--abovePersonColor);
 #calcValues{
     grid-area: calc;
     max-width: 100%;
-  height: 90%;
+  height: 100%;
   position: relative;
- 
-
   
 }
 #tipAmountContainer1{
@@ -331,6 +337,10 @@ color: var(--abovePersonColor);
     top:30%;
 
 }
+.calcOverPersonFlex{
+
+    font-size: 1.4em;
+    }
 #resetBttContainer{
     position: absolute;
     bottom: 8%;
